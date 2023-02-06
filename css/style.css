@@ -8,6 +8,9 @@
 .debug .card{
     height: 150px;
 }
+.debug .card,.debug .col{
+    background: var(--debug-secondary-light-color);
+}
 /* Debug fine */
 
 /* Utility */
@@ -35,15 +38,18 @@
     max-width: calc(100% - 1rem);
     margin: auto;
 }
+
 section{
-    padding: 4rem 0;
-}
-.card,.col{
-    margin: 1rem 0;
+    padding: 2rem 0;
 }
 section:nth-child(even){
     background-color: var(--secondary-color);
 }
+.card,.col{
+    margin: 2rem 0;
+    padding: 2rem 0;
+}
+
 body > header{
     height: 72px;
     width: 100%;
@@ -60,25 +66,37 @@ header .container{
 header .menu.desktop{
     display: none;
 }
+
 main{
-    padding-top: 42px;
+    padding-top: 72px;
 }
+
 #intro .card{
     background-color: var(--primary-light-color);
-    padding: 1rem;
+    padding: 2rem;
+}
+
+#testimonials{
+    text-align: center;
+}
+#testimonials .card{
+    background-color: var(--secondary-color);
 }
 /* Responsive */
 
+/* tablet view */
 @media screen and (min-width: 768px){
     .container{
         max-width: calc(100% - 4rem);
     }
+
     header .menu.mobile{
         display: none;
     }
     header .menu.desktop{
         display: block;
     }
+
     #intro .cards{
         display: flex;
         flex-wrap: wrap;
@@ -87,21 +105,77 @@ main{
     #intro .card{
         width: calc((100% / 3) - 1rem);
         padding: 2rem;
+        margin-bottom: 1.5em;
+        margin-top: 0;
     }
     #intro .card:first-child{
         width: calc((100% / 3)* 2 - 0.5rem);
     }
 
-}
+    #testimonials .card{
+        display: flex;
+        align-items: center;
+    }
+    #testimonials .card > div{
+        flex-grow: 1;
+        text-align: left;
+        padding: 1rem;
+    }
 
+    #features .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #features .card{
+        width: calc(100% / 2 - 1rem);
+        margin-top: 0;
+        margin: 1rem 0;
+    }
+
+    #about-us .container{
+        display: flex;
+    }
+    #about-us .text{
+        width: 60%;
+    }
+    #about-us .card{
+        width: 40%;
+    }
+    #about-us .container > div{
+        padding: 2rem;
+    }
+}
+/* desktop view */
 @media screen and (min-width: 992px){
     .container{
         max-width: calc(100% - 16rem);
     }
+
     #intro .card:first-child{
         display: flex;
     }
     #intro .card > div{
         width: 50%;
+    }
+
+    #planning .cols{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    #planning .col{
+        width: 40%;
+    }
+
+    #features .card{
+        width: calc(100% / 3 - (4 / 3) * 1rem);
+    }
+
+    #about-us .text{
+        width: 70%;
+    }
+    #about-us .card{
+        width: 30%;
     }
 }
