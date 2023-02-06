@@ -19,7 +19,8 @@
     --primary-color: #0084FD;
     --primary-light-color: #B5DDFF;
     --secondary-color: #9792E4;
-    --debug-secondary-light-color: #BCB5EE ;
+    --debug-secondary-light-color: #BCB5EE;
+    --footer-bg: #333333;
 }
 
 .flexed{
@@ -81,6 +82,16 @@ main{
 }
 #testimonials .card{
     background-color: var(--secondary-color);
+}
+
+#get-started{
+    text-align: center;
+}
+
+footer{
+    background-color: var(--footer-bg);
+    text-align: center;
+    padding: 2.5rem 0;
 }
 /* Responsive */
 
