@@ -37,6 +37,7 @@ p{
 
     --bg-gray: #333333;
     --bg-white: #fff;
+    --bg-purple: #9792E4;
 
     --text-gray: #5A6E7F;
     --text-black: #000;
@@ -64,6 +65,9 @@ p{
 }
 .btn.bg-blue{
     background-color: var(--primary-color);
+}
+.btn.bg-purple{
+    background-color: var(--bg-purple);
 }
 .btn.text-black{
     color: var(--text-black);
@@ -231,6 +235,41 @@ main{
     padding-bottom: 0;
 }
 
+#features{
+    
+}
+#features h2{
+    color: var(--text-white);
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0 4rem;
+}
+#features .card{
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+}
+#features .number{
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+#features h3{
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+#features p{
+    color: var(--text-gray);
+}
+#features .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 3rem;
+    font-weight: bold;
+}
+
 #get-started{
     text-align: center;
 }
@@ -283,7 +322,16 @@ footer{
         margin-top: 0;
         margin: 1rem 0;
     }
-
+    #features h2{
+        font-size: 2.5rem;
+    }
+    #features .number{
+        font-size: 4rem;
+    }
+    #features h3{
+        margin-top: 1rem;
+    }
+    
     #about-us .container{
         display: flex;
     }
@@ -300,7 +348,7 @@ footer{
 /* desktop view */
 @media screen and (min-width: 992px){
     .container{
-        max-width: calc(100% - 16rem);
+        max-width: calc(100% - 14rem);
     }
     header .menu.mobile{
         display: none;
