@@ -6,6 +6,7 @@
 html{
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
 }
 section{
     padding: 2rem 0;
@@ -93,6 +94,7 @@ body > header{
     left: 0;
     z-index: 9;
     background-color: var(--primary-color);
+    box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
 }
 header .menu.mobile{
     font-size: 1.5rem;
@@ -200,6 +202,7 @@ main{
 
 #testimonials{
     text-align: center;
+    padding-bottom: 6rem;
 }
 #testimonials h2{
     font-size: 1.2rem;
