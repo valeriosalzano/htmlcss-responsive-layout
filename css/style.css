@@ -10,9 +10,6 @@ html{
 section{
     padding: 2rem 0;
 }
-p{
-    line-height: 2rem;
-}
 /* Debug */
 
 .debug .card{
@@ -31,7 +28,7 @@ p{
     --primary-color: #0084FD;
     --primary-light-color: #B5DDFF;
     --secondary-color: #9792E4;
-    --debug-secondary-light-color: #BCB5EE;
+    --secondary-light-color: #D5D4F4;
 
     --btn-white: #fff;
 
@@ -42,7 +39,7 @@ p{
     --text-gray: #5A6E7F;
     --text-black: #000;
     --text-white: #fff;
-    
+    --text-gold: #FDC15F;
 }
 
 .flexed{
@@ -153,6 +150,7 @@ main{
 }
 #intro .card p{
     font-weight: bold;
+    line-height: 2rem;
 }
 #intro .card .icon{
     color: var(--primary-color);
@@ -162,6 +160,9 @@ main{
 
 #planning{
     color: var(--text-white);
+}
+#planning p{
+    line-height: 2rem;
 }
 #planning img{
     width: 100%;
@@ -215,6 +216,7 @@ main{
 #testimonials p{
     font-size: 1.2rem;
     padding-bottom: 1.5rem;
+    line-height: 2rem;
 }
 #testimonials .card{
     border-radius: 2.5rem;
@@ -260,6 +262,7 @@ main{
 }
 #features p{
     color: var(--text-gray);
+    line-height: 2rem;
 }
 #features .btn{
     display: inline-block;
@@ -268,9 +271,6 @@ main{
     font-weight: bold;
 }
 
-#about-us{
-
-}
 #about-us h2{
     font-size: 2.5rem;
     color: var(--secondary-color);
@@ -302,6 +302,7 @@ main{
     color: var(--secondary-color);
     font-size: 1.5rem;
     font-weight: 700;
+    line-height: 2rem;
 }
 #about-us .btn{
     margin-bottom: 3rem;
@@ -309,6 +310,45 @@ main{
 
 #get-started{
     text-align: center;
+}
+#get-started h2{
+    color: var(--secondary-light-color);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+}
+#get-started p{
+    color: var(--text-white);
+}
+#get-started p:last-of-type{
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+#get-started p.big{
+    color: var(--text-white);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#get-started p.biggest{
+    color: var(--text-gold);
+    font-size: 3.5rem;
+    font-weight: bolder;
+    margin: 2rem 0;
+}
+#get-started .btn{
+    color: var(--secondary-color);
+    margin: 2rem 0;
+    padding: 1rem 5rem;
+    font-weight: bold;
+    border-radius: 2rem;
+}
+#get-started .copyright{
+    color: var(--text-white);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+#get-started .copyright a{
+    color: var(--text-white);
 }
 
 footer{
@@ -395,7 +435,7 @@ footer{
 /* desktop view */
 @media screen and (min-width: 992px){
     .container{
-        max-width: calc(100% - 14rem);
+        max-width: calc(100% - 12rem);
     }
     header .menu.mobile{
         display: none;
