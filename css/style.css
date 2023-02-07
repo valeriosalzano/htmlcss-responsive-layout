@@ -352,9 +352,17 @@ main{
 }
 
 footer{
-    background-color: var(--footer-bg);
+    background-color: var(--bg-gray);
     text-align: center;
     padding: 2.5rem 0;
+    color: var(--text-white);
+    font-size: 0.8rem;
+}
+footer p:first-child{
+    margin-bottom: 4rem;
+}
+footer a{
+    color: var(--secondary-color);
 }
 /* Responsive */
 
@@ -431,6 +439,28 @@ footer{
     #about-us .card p{
         font-size: 1.8rem;
     }
+
+    #get-started p:last-of-type{
+        width: 60%;
+        margin: 0 auto;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    #get-started p.big{
+        font-size: 2.5rem;
+    }
+    #get-started p.biggest{
+        font-size: 5rem;
+    }
+    #get-started .btn{
+        padding: 1.5rem 5rem;
+        border-radius: 3rem;
+    }
+
+    footer .container{
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 /* desktop view */
 @media screen and (min-width: 992px){
@@ -493,10 +523,24 @@ footer{
         line-height: 3rem;
     }
     
+    #get-started p:last-of-type{
+        width: 50%
+    }
+
+    footer .container{
+        width: 40%;
+    }
 }
 /* wide desktop view */
 @media screen and (min-width: 1200px){
     .container{
         max-width: 1200px;
+    }
+    #get-started p:last-of-type{
+        width: 45%
+    }
+
+    footer .container{
+        width: 30%;
     }
 }
