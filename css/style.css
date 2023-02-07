@@ -3,15 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 2rem 0;
+}
+p{
+    line-height: 2rem;
+}
 /* Debug */
+
 .debug .card{
-    height: 150px;
+    min-height: 150px;
 }
-.debug .card,.debug .col{
+/* .debug .card,.debug .col{
     background: var(--debug-secondary-light-color);
-}
+} */
+
 /* Debug fine */
+
 
 /* Utility */
 
@@ -20,45 +32,69 @@
     --primary-light-color: #B5DDFF;
     --secondary-color: #9792E4;
     --debug-secondary-light-color: #BCB5EE;
-    --footer-bg: #333333;
+
+    --btn-white: #fff;
+
+    --bg-gray: #333333;
+    --bg-white: #fff;
+
+    --text-gray: #5A6E7F;
+    --text-black: #000;
+    --text-white: #fff;
+    
 }
 
 .flexed{
     display: flex;
 }
-
 .justified-sb{
     justify-content: space-between;
 }
 .aligned-c{
     align-items: center;
 }
-/* Utility end */
 
-.container{
-    max-width: calc(100% - 1rem);
-    margin: auto;
+.btn{
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+}
+.btn.bg-white{
+    background-color: var(--btn-white);
+}
+.btn.bg-blue{
+    background-color: var(--primary-color);
+}
+.btn.text-black{
+    color: var(--text-black);
+}
+.btn.text-white{
+    color: var(--text-white);
 }
 
-section{
-    padding: 2rem 0;
+/* Utility end */
+
+
+.container{
+    max-width: calc(100% - 4rem);
+    margin: auto;
 }
 section:nth-child(even){
     background-color: var(--secondary-color);
 }
-.card,.col{
-    margin: 2rem 0;
-    padding: 2rem 0;
-}
 
 body > header{
-    height: 72px;
+    height: 70px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9;
     background-color: var(--primary-color);
+}
+header .menu.mobile{
+    font-size: 1.5rem;
+    color: var(--text-white);
 }
 header .container{
     height: 100%;
@@ -67,21 +103,132 @@ header .container{
 header .menu.desktop{
     display: none;
 }
+header ul{
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+    margin-left: 1rem;
+    color: var(--text-white);
+}
 
 main{
-    padding-top: 72px;
+    padding-top: 70px;
 }
 
 #intro .card{
-    background-color: var(--primary-light-color);
     padding: 2rem;
+    text-align: center;
+    background-color: var(--primary-light-color);
+    color: var(--text-gray);
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+#intro .first.card{
+    text-align: left;
+    padding-bottom: 0;
+}
+#intro .first.card img{
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+#intro .btn{
+    display: inline-block;
+    margin: 2rem 0;
+    text-decoration: none;
+    padding: 0.8rem 4rem;
+    font-weight: bold;
+}
+#intro .card h3{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+#intro .card p{
+    font-weight: bold;
+}
+#intro .card .icon{
+    color: var(--primary-color);
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+#planning{
+    color: var(--text-white);
+}
+#planning img{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+#planning .first-img{
+    margin-top: 2rem;
+}
+#planning .col{
+    border-radius: 1.5rem;
+    padding: 2rem 0;
+}
+#planning h2{
+    font-size: 2rem;
+    margin: 4rem 0 2rem;
+}
+#planning .col:nth-child(2){
+    color: var(--text-black);
+    background-color: var(--bg-white);
+    text-align: center;
+}
+#planning h3{
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+#planning .arrow{
+    display: inline-block;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    margin-top: 2rem;
+
 }
 
 #testimonials{
     text-align: center;
 }
+#testimonials h2{
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 2rem 0;
+    text-transform: uppercase;
+}
+#testimonials p.big{
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 3rem;
+}
+#testimonials p{
+    font-size: 1.2rem;
+    padding-bottom: 1.5rem;
+}
 #testimonials .card{
+    border-radius: 2.5rem;
     background-color: var(--secondary-color);
+    color: var(--text-white);
+    margin-top: 1.5rem;
+    padding: 2rem 1rem;
+}
+#testimonials .card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+#testimonials .name{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 0;
 }
 
 #get-started{
@@ -97,16 +244,6 @@ footer{
 
 /* tablet view */
 @media screen and (min-width: 768px){
-    .container{
-        max-width: calc(100% - 4rem);
-    }
-
-    header .menu.mobile{
-        display: none;
-    }
-    header .menu.desktop{
-        display: block;
-    }
 
     #intro .cards{
         display: flex;
@@ -115,22 +252,25 @@ footer{
     }
     #intro .card{
         width: calc((100% / 3) - 1rem);
-        padding: 2rem;
-        margin-bottom: 1.5em;
-        margin-top: 0;
     }
-    #intro .card:first-child{
+    #intro .first.card{
         width: calc((100% / 3)* 2 - 0.5rem);
+    }
+
+    #planning h2{
+        font-size: 4rem;
+        margin: 5rem 0 3rem;
     }
 
     #testimonials .card{
         display: flex;
         align-items: center;
+        padding-bottom: 1rem;
     }
-    #testimonials .card > div{
+    #testimonials .card .col{
         flex-grow: 1;
         text-align: left;
-        padding: 1rem;
+        padding: 0 1.5rem;
     }
 
     #features .cards{
@@ -162,21 +302,45 @@ footer{
     .container{
         max-width: calc(100% - 16rem);
     }
+    header .menu.mobile{
+        display: none;
+    }
+    header .menu.desktop{
+        display: block;
+    }
 
-    #intro .card:first-child{
+    #intro .first.card{
         display: flex;
     }
-    #intro .card > div{
+    #intro .first.card > *{
         width: 50%;
+    }
+    #intro .first.card img{
+        align-self: flex-end;
+        margin: 0 auto;
     }
 
     #planning .cols{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: flex-end;
     }
     #planning .col{
         width: 40%;
+        padding: 2rem;
+    }
+    #planning .col:first-of-type{
+        padding-bottom: 0;
+    }
+    #planning h2{
+        font-size: 2rem;
+        margin-top: 6rem;
+    }
+    #planning .right.col{
+        width: 30%;
+    }
+    #planning .right.col img{
+        width: 80%;
     }
 
     #features .card{
@@ -188,5 +352,11 @@ footer{
     }
     #about-us .card{
         width: 30%;
+    }
+}
+/* wide desktop view */
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1200px;
     }
 }

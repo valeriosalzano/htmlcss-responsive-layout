@@ -5,86 +5,131 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/> 
         <title>Responsive Layout</title>
     </head>
     
     <body class="debug">
         <header>
             <nav class="container flexed justified-sb aligned-c">
-                <img class="logo" src="#" alt="IMAGE">
-                <div class="menu desktop">Menu</div>
-                <div class="menu mobile">FAbars</div>
+                <img class="logo" src="img/logo.png" alt="logo image">
+                <nav class="menu desktop">
+                    <ul class="flexed">
+                        <li><a href="#planning" >Planning </a></li>
+                        <li><a href="#testimonials" >Testimonials </a></li>
+                        <li><a href="#features" >Features </a></li>
+                        <li><a href="#about-us" >About Us </a></li>
+                        <li><a class="btn bg-white text-black"href="#get-started" >Get Started </a></li>
+                    </ul>
+                </nav>
+                <div class="menu mobile"><i class="fa-solid fa-bars"></i></div>
             </nav>
         </header>
 
         <main>
             <section id="intro">
                 <div class="container cards">
-                    <div class="card">
-                        <div>
-                            <h3>CARDTITLE</h3>
-                            <div>TEXT</div>
-                            <div>LINK</div>
+                    <div class="first card">
+                        <div class="text-container">
+                            <h3>Get a demo application</h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, atque impedit, quae ullam optio cumque ducimus illo accusamus dignissimos odit porro, modi assumenda a est sit perferendis cum delectus odio?
+                            </p>
+                            <a class="btn bg-blue text-white" href="#"><i class="fa-brands fa-apple"></i> App Store</a>
                         </div>
-                        <img src="#" alt="IMAGE">
+                        <img src="img/phone.png" alt="phone image">
                     </div>
                     <div class="card">
-                        <div>ICON</div>
-                        <h3>CARDTITLE</h3>
-                        <div>TEXT</div>
+                        <div class="icon"><i class="fa-solid fa-file-code"></i></div>
+                        <h3>Clean Code</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, atque impedit, quae ullam optio cumque ducimus illo accusamus dignissimos odit porro, modi assumenda a est sit perferendis cum delectus odio?
+                        </p>
                     </div>
                     <div class="card">
-                        <div>ICON</div>
-                        <h3>CARDTITLE</h3>
-                        <div>TEXT</div>
+                        <div class="icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <h3>Web Design</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, atque impedit, quae ullam optio cumque ducimus illo accusamus dignissimos odit porro, modi assumenda a est sit perferendis cum delectus odio?
+                        </p>
                     </div>
                     <div class="card">
-                        <div>ICON</div>
-                        <h3>CARDTITLE</h3>
-                        <div>TEXT</div>
+                        <div class="icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Development</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, atque impedit, quae ullam optio cumque ducimus illo accusamus dignissimos odit porro, modi assumenda a est sit perferendis cum delectus odio?
+                        </p>
                     </div>
                     <div class="card">
-                        <div>ICON</div>
-                        <h3>CARDTITLE</h3>
-                        <div>TEXT</div>
+                        <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
+                        <h3>Branding</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, atque impedit, quae ullam optio cumque ducimus illo accusamus dignissimos odit porro, modi assumenda a est sit perferendis cum delectus odio?
+                        </p>
                     </div>
                 </div>
             </section>
 
             <section id="planning">
                 <div class="container cols">
-                    <div class="col">
-                        <img src="#" alt="IMAGE">
-                        <h2>SECTIONTITLE</h2>
-                        <div>TEXT</div>
+                    <div class=" left col">
+                        <img class="first-img" src="img/planning1.png" alt="strategic planning image">
+                        <h2>Strategic Planning</h2>
+                        <p>
+                            Egestas dui id omare arcu odio. In tellus integer feugiat scelerisque varius morbi enim nunc. Habitasse platea dictumst quisque sagittis. Interdum velit euismod in pellentesque massa placerat duis. Quis viverra nibh cras pulvinar mattis.
+                        </p>
                     </div>
-                    <div class="col">
-                        <img src="#" alt="IMAGE">
-                        <h3>CARDTITLE</h3>
-                        <div>TEXT</div>
-                        <div>ARROW</div>
+                    <div class="right col">
+                        <img src="img/planning2.png" alt="strategic planning second image">
+                        <h3>App Development</h3>
+                        <p>
+                            <em>Develop an on-demand app for your delivery business to reach your targeted customers without any interruption.</em>
+                        </p>
+                        <div class="arrow"><i class="fa-solid fa-arrow-down-long"></i></div>
                     </div>
                 </div>
             </section>
 
             <section id="testimonials">
                 <div class="container">
-                    <h2>SECTIONTITLE</h2>
-                    <div>TEXT</div>
-                    <div>TEXT</div>
+                    <h2>testimonials</h2>
+                    <p class="big">We are committed expert partners</p>
+                    <p>We place huge value on strong relationships and have seen the benefit they bring to our business. Customer feedback is vital in helping us to get it right.</p>
 
                     <div class="cards">
                         <div class="card">
-                            <img src="#" alt="IMAGE">
-                            <div>TEXT</div>
+                            <img class="circled" src="img/testimonial1.jpg" alt="Nat Reynolds photo">
+                            <div class="col">
+                                <p>
+                                    <span class="quote left"><i class="fa-solid fa-quote-left"></i></span>
+                                    Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh pulvinar proin.
+                                    <span class="quote right"><i class="fa-solid fa-quote-right"></i></span>
+                                </p>
+                                <p class="name">Nat Reynolds</p>
+                            </div>
                         </div>
                         <div class="card">
-                            <img src="#" alt="IMAGE">
-                            <div>TEXT</div>
+                            <img class="circled" src="img/testimonial2.jpg" alt="Celia Almeda photo">
+                            <div class="col">
+                                <p>
+                                    <span class="quote left"><i class="fa-solid fa-quote-left"></i></span>
+                                    Pharetra vel turpis nunc eget lorem. Quisque id diam vel quam elementum pulvinar etiam. Urna porttitor rhoncus dolor purus non enim praesent elementum.
+                                    <span class="quote right"><i class="fa-solid fa-quote-right"></i></span>
+                                </p>
+                                <p class="name">Celia Almeda</p>
+                            </div>
                         </div>
                         <div class="card">
-                            <img src="#" alt="IMAGE">
-                            <div>TEXT</div>
+                            <img class="circled" src="img/testimonial3.jpg" alt="Bob Roberts photo">
+                            <div class="col">
+                                <p>
+                                    <span class="quote left"><i class="fa-solid fa-quote-left"></i></span>
+                                    Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin. Nibh nisl condimentum id venenatis a condimentum.
+                                    <span class="quote right"><i class="fa-solid fa-quote-right"></i></span>
+                                </p>
+                                <p class="name">Bob Roberts</p>
+                            </div>
                         </div>
                     </div>
                 </div>
